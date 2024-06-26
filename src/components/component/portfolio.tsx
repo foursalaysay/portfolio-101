@@ -57,7 +57,12 @@ import {
   DockerImage,
   MongoImage,
   NodeImage,
-  ReactImage
+  ReactImage,
+  ProfileImage,
+  LogoImage,
+  Facebook,
+  Instagram,
+  LinkedIn
 } from './image'
 
 export function Portfolio() {
@@ -65,7 +70,12 @@ export function Portfolio() {
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center bg-background shadow">
         <Link href="#" className="flex items-center justify-center" prefetch={false}>
-          <MountainIcon className="h-6 w-6" />
+        <Image
+                src={LogoImage}
+                width="24"
+                height="24"
+                alt="ProfileImage"
+              />
           <span className="sr-only">Kyle</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -124,23 +134,53 @@ export function Portfolio() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/80">
+        <section className="w-full h-80 lg:h-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/50">
           <div className="container px-4 md:px-6 text-primary-foreground">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-8xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">Kyle Salaysay</h1>
+                  <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">Kyle Salaysay</h1>
                   <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
                     Aspiring full-stack developer with a passion for building innovative web and mobile applications.
                   </p>
                 </div>
+                <Button>Download Resume</Button>
+                <div className="flex flex-row justify-center space-x-6">
+                 
+                      <a href="" className="transform transition duration-300 hover:scale-150">
+                        <Image
+                          src={Facebook}
+                          width={24}
+                          height={24}
+                          alt="FacebookImage"
+                          ></Image>
+                      </a>
+                      <a href="https://www.instagram.com/eazzyyy_kayl/">
+                        <Image
+                          src={Instagram}
+                          width={24}
+                          height={24}
+                          alt="FacebookImage"
+                          ></Image>
+                      </a>
+                      <a href="">
+                        <Image
+                          src={LinkedIn}
+                          width={24}
+                          height={24}
+                          alt="FacebookImage"
+                          ></Image>
+                      </a>
+                 
+
+                </div>
               </div>
               <Image
-                src="/placeholder.svg"
+                src={ProfileImage}
                 width="550"
                 height="550"
-                alt="Hero"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+                alt="NodeImage"
+                className="invisible lg:visible"
               />
             </div>
           </div>
@@ -243,7 +283,7 @@ export function Portfolio() {
               />
                   <span>React</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={NodeImage}
                 width="24"
@@ -252,7 +292,7 @@ export function Portfolio() {
               />
                   <span>Node.js</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={JavascriptImage}
                 width="24"
@@ -261,7 +301,7 @@ export function Portfolio() {
               />
                   <span>JavaScript</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={MongoImage}
                 width="24"
@@ -270,7 +310,7 @@ export function Portfolio() {
               />
                   <span>MongoDB</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={GitImage}
                 width="24"
@@ -279,7 +319,7 @@ export function Portfolio() {
               />
                   <span>Git</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={TailwindImage}
                 width="24"
@@ -288,7 +328,7 @@ export function Portfolio() {
               />
                   <span>Tailwind CSS</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={DockerImage}
                 width="24"
@@ -297,7 +337,7 @@ export function Portfolio() {
               />
                   <span>Docker</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={PrismaImage}
                 width="24"
@@ -306,7 +346,7 @@ export function Portfolio() {
               />
                   <span>Prisma</span>
                 </div>
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
                 <Image
                 src={JavascriptImage}
                 width="24"
