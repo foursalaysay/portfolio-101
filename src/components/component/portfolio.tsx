@@ -28,6 +28,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
+import Image from "next/image"
 
 import {
   MountainIcon,
@@ -39,9 +40,25 @@ import {
   GitGraphIcon,
   WindIcon,
   DockIcon,
-  CloudIcon
+  CloudIcon,
+  DjangoIcon
 
 } from './icons'
+
+import {
+  JavascriptImage,
+  GitImage,
+  PythonImage,
+  JavaImage,
+  NextImage,
+  TailwindImage,
+  CSharpImage,
+  PrismaImage,
+  DockerImage,
+  MongoImage,
+  NodeImage,
+  ReactImage
+} from './image'
 
 export function Portfolio() {
   return (
@@ -114,11 +131,11 @@ export function Portfolio() {
                 <div className="space-y-2">
                   <h1 className="text-8xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">Kyle Salaysay</h1>
                   <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
-                    Experienced full-stack developer with a passion for building innovative web and mobile applications.
+                    Aspiring full-stack developer with a passion for building innovative web and mobile applications.
                   </p>
                 </div>
               </div>
-              <img
+              <Image
                 src="/placeholder.svg"
                 width="550"
                 height="550"
@@ -133,8 +150,8 @@ export function Portfolio() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">About Me</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I am a passionate full-stack developer with over 5 years of experience in the industry. I have a strong
-                background in JavaScript, React, Node.js, and various other web technologies. I am always eager to learn
+                I am a passionate full-stack developer working to have a startup company. I have a strong
+                background in JavaScript, React, Node.js, Python, Java, C# and various other web technologies. I am always eager to learn
                 new skills and stay up-to-date with the latest industry trends.
               </p>
             </div>
@@ -217,38 +234,88 @@ export function Portfolio() {
                 Here are some of the technologies and tools I&apos;m proficient in:
               </p>
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <CodepenIcon className="h-6 w-6" />
+                <div className="flex items-center gap-4 bg-background p-4 rounded-lg shadow-sm">
+                <Image
+                src={ReactImage}
+                width="24"
+                height="24"
+                alt="React"
+              />
                   <span>React</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <NetworkIcon className="h-6 w-6" />
+                <Image
+                src={NodeImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>Node.js</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <EclipseIcon className="h-6 w-6" />
+                <Image
+                src={JavascriptImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>JavaScript</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <DatabaseIcon className="h-6 w-6" />
+                <Image
+                src={MongoImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>MongoDB</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <GitGraphIcon className="h-6 w-6" />
+                <Image
+                src={GitImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>Git</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <WindIcon className="h-6 w-6" />
+                <Image
+                src={TailwindImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>Tailwind CSS</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <DockIcon className="h-6 w-6" />
+                <Image
+                src={DockerImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
                   <span>Docker</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
-                  <CloudIcon className="h-6 w-6" />
-                  <span>AWS</span>
+                <Image
+                src={PrismaImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
+                  <span>Prisma</span>
                 </div>
+                <div className="flex items-center gap-2 bg-background p-4 rounded-lg shadow-sm">
+                <Image
+                src={JavascriptImage}
+                width="24"
+                height="24"
+                alt="NodeImage"
+              />
+                  <span>Django</span>
+                </div>
+               
               </div>
             </div>
           </div>
