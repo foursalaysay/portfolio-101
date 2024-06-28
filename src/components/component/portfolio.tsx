@@ -165,7 +165,9 @@ export function Portfolio() {
                     Aspiring full-stack developer with a passion for building innovative web and mobile applications.
                   </p>
                 </div>
-               
+                <Link href="/files/resume.pdf" passHref className="z-10">
+                  <Button className="w-full">See Resume</Button>
+                </Link>
                 <div className="flex flex-row justify-center space-x-6">
                  
                       <a href="https://www.facebook.com/johnkyle.salaysay.7" className="transform transition duration-300 hover:scale-150 cursor-pointer z-50">
@@ -204,11 +206,10 @@ export function Portfolio() {
                 className="invisible lg:visible"
               />
             </div>
+            
           </div>
         </section>
-        <Link href="/files/resume.pdf" passHref>
-                  <Button>See Resume</Button>
-        </Link>
+        
         <section id="profile" className="w-full py-12 md:py-24 lg:py-32">
         
           <div className="container px-4 md:px-6">
