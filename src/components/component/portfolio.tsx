@@ -206,10 +206,11 @@ export function Portfolio() {
             </div>
           </div>
         </section>
-        <section id="profile" className="w-full py-12 md:py-24 lg:py-32">
         <Link href="/files/resume.pdf" passHref>
-                  <Button>Download Resume</Button>
-                </Link>
+                  <Button>See Resume</Button>
+        </Link>
+        <section id="profile" className="w-full py-12 md:py-24 lg:py-32">
+        
           <div className="container px-4 md:px-6">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">About Me</h2>
