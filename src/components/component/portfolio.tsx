@@ -23,12 +23,23 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
+
+'use client'
+
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
+
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
+
+import axios from "axios"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+
+
+//MAGIC UI
+import Particles from "../magicui/particles"
 
 import {
   MountainIcon,
@@ -65,9 +76,18 @@ import {
   LinkedIn
 } from './image'
 
+
+
 export function Portfolio() {
+
+  
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
+      {/* THIS IS FOR THE BACKGROUND */}
+       <div className="absolute top-0 left-0 w-full h-full z-0">
+        <Particles className="h-full w-full" quantity={100} color="#ffffff" />
+      </div>
       <header className="px-4 lg:px-6 h-14 flex items-center bg-background shadow">
         <Link href="#" className="flex items-center justify-center" prefetch={false}>
         <Image
@@ -134,20 +154,21 @@ export function Portfolio() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full h-80 lg:h-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/50">
+        <section className="w-full h-80 lg:h-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/50 z-10">
           <div className="container px-4 md:px-6 text-primary-foreground">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">Kyle Salaysay</h1>
+               
                   <p className="max-w-[600px] text-primary-foreground/80 md:text-xl">
                     Aspiring full-stack developer with a passion for building innovative web and mobile applications.
                   </p>
                 </div>
-                <Button>Download Resume</Button>
+               
                 <div className="flex flex-row justify-center space-x-6">
                  
-                      <a href="" className="transform transition duration-300 hover:scale-150">
+                      <a href="https://www.facebook.com/johnkyle.salaysay.7" className="transform transition duration-300 hover:scale-150 cursor-pointer z-50">
                         <Image
                           src={Facebook}
                           width={24}
@@ -155,7 +176,7 @@ export function Portfolio() {
                           alt="FacebookImage"
                           ></Image>
                       </a>
-                      <a href="https://www.instagram.com/eazzyyy_kayl/">
+                      <a href="https://www.instagram.com/eazzyyy_kayl/" className="transform transition duration-300 hover:scale-150 cursor-pointer z-50" >
                         <Image
                           src={Instagram}
                           width={24}
@@ -163,7 +184,7 @@ export function Portfolio() {
                           alt="FacebookImage"
                           ></Image>
                       </a>
-                      <a href="">
+                      <a href="https://www.linkedin.com/in/john-kyle-salaysay-b58110295/" className="transform transition duration-300 hover:scale-150 cursor-pointer z-50">
                         <Image
                           src={LinkedIn}
                           width={24}
@@ -186,6 +207,9 @@ export function Portfolio() {
           </div>
         </section>
         <section id="profile" className="w-full py-12 md:py-24 lg:py-32">
+        <Link href="/files/resume.pdf" passHref>
+                  <Button>Download Resume</Button>
+                </Link>
           <div className="container px-4 md:px-6">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">About Me</h2>
